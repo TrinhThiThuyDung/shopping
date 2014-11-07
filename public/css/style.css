@@ -1,4 +1,6 @@
 /**********CSS for Container**************/
+/* CSS Document */
+
 #container {
 	width:1024px;
 	margin-left: auto;
@@ -208,8 +210,9 @@
 	float:right;
 	
 }
-
 /*************CSS for  TOP*****************/
+
+/* CSS Document */
 
 .top {
 	padding: 19px 20px 0 61px;
@@ -331,6 +334,8 @@
 
 /******************CSS for menu*******************/
 
+/* CSS Document */
+
 #menu {
 	background:#433225;
 	margin:0 auto 0px;
@@ -426,13 +431,10 @@
 	display:block;
 	}
 #menu ul > ul > li ul li a:hover, #menu ul > ul > li ul li a.active { color:#d45f09; }
-
 /***************CSS for main*****************/
 
-* {
-	margin:0px;
-	padding:0px;
-	}
+/* CSS Document */
+
 .clear {
 	clear:both;
 	display:block;
@@ -545,8 +547,7 @@ ul{
 	list-style:none;
 	margin:0px;
 	padding:0px;
-}
-
+	}
 /************CSS for back-top****************/
 
 #back-top {
@@ -767,14 +768,12 @@ a.nivo-prevNav {
 
 /************CSS for login*****************/
 
-#column-right{
-	float:right;
-	width:241px;
-	margin:0 0 0 0px;
+#column-right .acount li a+a{
+	padding-left:0px;
+	background:none;
 	}
-#column-right .box .box-content{
-	padding:7 0 9px;
-	border-top:none;
+#column-right + #content{
+	margin-right:241px;
 	}
 .acount{
 	list-style:none;
@@ -796,21 +795,7 @@ a.nivo-prevNav {
 .acount li a:hover{
 	color:#d45f09;
 }
-#column-right .acount li a+a{
-	padding-left:0px;
-	background:none;
-	}
-#column-right + #content{
-	margin-right:241px;
-	}
-#content{
-	min-height: 400px;
-	margin-bottom:0px;
-	padding-top:0px;
-	padding-left:0px;
-	padding-right:20px;
-	width:783px;
-	}
+
 .fast-link{
 	color:#a6a6a5;
 	padding:6px 5px 5px 0px;
@@ -851,7 +836,7 @@ a.nivo-prevNav {
 	padding:0 20px 12px 20px;
 	width:335px;
 	padding-top:15px;
-	padding-bottom:20px;
+	padding-bottom:25px;
 	background:url(../images/login/login-content-right.gif) right bottom no-repeat #ffffff;
 	height:233px;
 	}
@@ -879,5 +864,5 @@ a.nivo-prevNav {
 	}
 .padd{
 	padding-bottom:5px;
-}
+	}
 
