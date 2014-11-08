@@ -48,52 +48,52 @@
             <div id="menu">
             <ul class="menu">
             <li class="cat-1">
-                <a href="#">SẢN PHẨM</a>
+                <a href="#">SẢN PHẨM</a>
                 <ul>
                      
                     <li>
-                        <a href="#">Thêm sản phẩm</a>
+                        <a href="#">Thêm sản phẩm</a>
                     </li>
                     <li>
-                        <a href="#">Sửa thông tin</a>
+                        <a href="#">Sửa thông tin sản phẩm</a>
                     </li>
                     <li>
-                        <a href="#">Xóa sản phẩm</a>
+                        <a href="#">Xóa sản phẩm</a>
                     </li>
                 </ul>
             </li>
             <li class="cat-2">
-                <a href="#">KHÁCH HÀNG</a>
+                <a href="#">KHÁCH HÀNG</a>
                 <ul>
                     <li>
-                        <a href="#">Danh sách khách hàng</a>
+                        <a href="#">Danh sách khách hàng</a>
                     </li>
                     <li>
-                        <a href="#">Khách hàng thân thiết</a>
+                        <a href="#">Khách hàng thân thiết</a>
                     </li>
                 </ul>
             </li>
             <li class="cat-3">
-                <a href="#">NHÀ CUNG CẤP</a>
+                <a href="#">NHÀ CUNG CẤP</a>
                 <ul>
                     <li>
-                        <a href="#">Thông tin chi tiết</a>
+                        <a href="#">Thông tin chi tiết</a>
                     </li>
                     <li>
-                        <a href="#">Quản lý tài khoản</a>
+                        <a href="#">Quản lý tài khoản</a>
                     </li>
                     
                 </ul>
             </li>
             <li class="cat-5">
-                <a href="#">HỎI & ĐÁP</a>
+                <a href="#">HỎI & ĐÁP</a>
                 
             </li>
             <li class="cat-6">
-                <a href="#">DANH MỤC SẢN PHẨM</a>
+                <a href="#">DANH MỤC SẢN PHẨM</a>
                 <ul>
                     <li>
-                        <a href="#">Tất cả</a>
+                        <a href="#">Tất cả</a>
                     </li>
                     @yield('san-pham')
                 </ul>
