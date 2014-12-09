@@ -7,32 +7,38 @@
             <div class="top">
             	<div id="row">
                     <div class="row-right">
-                        <div class="group-name"></div>
-                        
+                        <div class="group-name">
+                        	<img src="{{Asset('/images/header-phone.png')}}" />
+                        </div>
                         <div id="welcome">
                             <?php if(!Session::has('id_custome')){?>
-                         Chào mừng bạn tới cửa hàng <a href="<?php echo URL::to('/')?>/custome/login">Đăng nhập</a>hoặc<a href="#">Đăng kí</a>
-                          <?php } ?>
+                         Chào mừng bạn tới cửa hàng <a href="<?php echo URL::to('/')?>/custome/login">Đăng nhập</a>hoặc<a href="<?php echo URL::to('/')?>/custome/signup ?>">Đăng kí</a>
                          </div>
-                        
+                         <?php } ?>
                          <div id ="search">
-                         	<div class="button-search">Tìm kiếm</div>
-                            <span class="search-input">
-                            	<input type="text" name="filter" placeholder="Enter here" >
-                            </span>
+                         	<div class="search-box">
+                                <div class="button-search">Tìm kiếm</div>
+                                <span class="search-input">
+                                    <input type="text" name="filter" placeholder="Bàn gỗ, ghế dài, đèn..." >
+                                </span>
+                             </div>
                          </div>
+                         <div id="company">
+                         	Dành cho nhà sản xuất <a href="<?php echo URL::to('/')?>/supplier/login ?>">Đăng nhập</a>
+                         </div>
+                         
                         </div>
                      <div id="logo">
-                     <a href="<?php echo URL::to('/')?>/home">
+                     <a href="<?php echo URL::to('/') ?>/custome/home">
                      <img src="{{Asset('/images/11.gif')}}" title="logo" alt="logo">
                      </a>
-                     <a href="home.html">
+                     <a href="<?php echo URL::to('/') ?>/custome/home">
                      <img src="{{Asset('/images/23.gif')}}" title="logo" alt="logo">
                      </a>
-                     <a href="home.html">
+                     <a href="<?php echo URL::to('/') ?>/custome/home">
                      <img src="{{Asset('/images/6.gif')}}" title="logo" alt="logo">
                      </a>
-                     <a href="home.html">
+                     <a href="<?php echo URL::to('/') ?>/custome/home">
                      <img src="{{Asset('/images/25.gif')}}" title="logo" alt="logo">
                      </a>
                       </div>
@@ -45,164 +51,184 @@
             <div id="menu">
             <ul class="menu">
             <li class="cat-1">
-            	<a href="#">ĐIỆN TỬ</a>
+            	<a href="#">PHÒNG KHÁCH</a>
                 <ul>
                 	<li>
-                    	<a href="#">Điện thoại</a>
+                    	<a href="# ">Kệ tivi</a>
                     </li>
                     <li>
-                    	<a href="#">Tivi / Màn hình</a>
+                    	<a href="#">Sofa / ghế dài</a>
                     </li>
                     <li>
-                    	<a href="#">Máy tính</a>
+                    	<a href="#">Tủ kệ trang trí</a>
                     </li>
                     <li>
-                    	<a href="#">Linh kiện</a>
+                    	<a href="#">Tủ giày dép</a>
                     </li>
-                    <li>
-                    	<a href="#">Máy ảnh/Máy quay</a>
-                    </li>
-                    <li>
-                    	<a href="#">Máy in</a>
-                    </li>
-                    
                 </ul>
             </li>
             <li class="cat-2">
-            	<a href="#">GIA DỤNG</a>
+            	<a href="#">PHÒNG NGỦ</a>
                 <ul>
                     <li>
-                    	<a href="#">Đèn bàn</a>
+                    	<a href="#">Giường ngủ</a>
                     </li>
                     <li>
-                    	<a href="#">Quạt điện</a>
+                    	<a href="#">Tủ đầu giường</a>
                     </li>
                     <li>
-                    	<a href="#">Đồ dùng nhà bếp</a>
-                        	<ul>
-                            	<li> <a href="#">Nổi, Xoong, Chảo</li>
-                                <li> <a href="#">Bộ ấm chém</li>
-                                <li> <a href="#">Dụng cụ gọt</li>
-                            </ul>
+                    	<a href="#">Bàn trang điểm</a>
                     </li>
                     <li>
-                    	<a href="#">Rỏ, khay , kệ</a>
-                    </li>
-                    <li>
-                    	<a href="#">Tủ vải</a>
+                    	<a href="#">Tủ quần áo</a>
                     </li>
                 </ul>
             </li>
             <li class="cat-3">
-            	<a href="#">THỜI TRANG</a>
+            	<a href="#">DÀNH CHO BÉ</a>
                 <ul>
                 	<li>
-                    	<a href="#">Quần áo</a>
+                    	<a href="#">Bàn học trẻ em</a>
                     </li>
                     <li>
-                    	<a href="#">Giày dép</a>
+                    	<a href="#">Giường trẻ em</a>
                     </li>
                     <li>
-                    	<a href="#">Trang sức / Phụ kiện</a>
+                    	<a href="#">Tủ kệ</a>
                     </li>
-                    <li>
-                    	<a href="#">Ví balo - Túi xách</a>
-                    </li> 
                 </ul>
             </li>
             <li class="cat-5">
-            	<a href="#">MẸ & BÉ</a>
+            	<a href="#">PHÒNG ĂN / BẾP</a>
                 <ul>
                 	<li>
-                    	<a href="#">Đồ cho mẹ</a>
+                    	<a href="#">Bàn ăn</a>
                     </li>
                     <li>
-                    	<a href="#">Đồ dùng trẻ em</a>
+                    	<a href="#">Kệ treo tường</a>
                     </li>
                     <li>
-                    	<a href="#">Đồ chơi trẻ con</a>
+                    	<a href="#">cabinet</a>
                     </li>
                     <li>
-                    	<a href="#">Thời trang trẻ em</a>
-                    </li>
-                    
+                    	<a href="#">Quần bar/ Tủ rượu</a>
+                    </li> 
                 </ul>
             </li>
             <li class="cat-6">
-            	<a href="#">SPA - LÀM ĐẸP</a>
+            	<a href="#">PHÒNG TẮM</a>
                 <ul>
                 	<li>
-                    	<a href="#">Spa - massage</a>
+                    	<a href="#">Tủ lavabo</a>
                     </li>
                     <li>
-                    	<a href="#">Trang điểm - Làm tóc</a>
+                    	<a href="#">Bồn tắm</a>
                     </li>
                     <li>
-                    	<a href="#">Chăm sóc sức khỏe</a>
+                    	<a href="#">Gương soi</a>
                     </li>
-                    
                 </ul>
             </li>
             <li class="cat-7">
-            	<a href="#">DU LỊCH</a>
+            	<a href="#">TRANG TRÍ</a>
                 <ul>
                 	<li>
-                    	<a href="#">Du lịch Miền Bắc</a>
+                    	<a href="#">Đèn LED</a>
                     </li>
                     <li>
-                    	<a href="#">Du lịch Miền Trung</a>
+                    	<a href="#">Màn cửa</a>
                     </li>
                     <li>
-                    	<a href="#">Du lịch Miền Nam</a>
+                    	<a href="#">Thảm trải sàn</a>
                     </li>
                     <li>
-                    	<a href="#">Du lịch Nước Ngoài</a>
+                    	<a href="#">Đồ mỹ nghệ</a>
                     </li>
                 </ul>
             </li>
             <li class="cat-8">
-            	<a href="#">GIẢI TRÍ</a>
-                <ul>
-                	<li>
-                    	<a href="#">Xem phim</a>
-                    </li>
-                    <li>
-                    	<a href="#">Karaoke</a>
-                    </li>
-                    <li>
-                    	<a href="#">Chụp ảnh</a>
-                    </li>
-                    <li>
-                    	<a href="#">Chơi gold</a>
-                    </li> 
-                </ul>
-            </li>
-            <li class="cat-8">
-            	<a href="#">THẾ GIỚI XE</a>
-                                <ul>
-                	<li>
-                    	<a href="#">Xe hơi</a>
-                    </li>
-                    <li>
-                    	<a href="#">Xe máy</a>
-                    </li>
-                    <li>
-                    	<a href="#">Xe đạp</a>
-                    </li>
-                    <li>
-                    	<a href="#">Phụ tùng - Đồ chơi</a>
-                    </li>
-                    <li>
-                    	<a href="#">Dịch vị xe hơi - xe máy</a>
-                    </li> 
-                </ul>
-
+            	<a href="#">SÀN ĐẸP</a>
             </li>
             </ul>
             <div class="clear"></div>
             </div>
             <!--MENU: END -->
-
-            @yield('content')
             
+            <!--SLIDE: START -->
+            <div class="slide">
+            	<div class="slideshow">
+                	<div id="slidewhow0">
+                        <div id="bigPic">
+                            <a href="<?php echo URL::to('/') ?>/custome/home">
+                                <img href="" src="{{Asset('/images/slide/2.jpg')}}">
+                            </a>
+                            <a href="<?php echo URL::to('/') ?>/custome/home">
+                                <img alt="" src="{{Asset('/images/slide/3.jpg')}}">
+                            </a>
+                            <a href="<?php echo URL::to('/') ?>/custome/home">
+                                <img alt="" src="{{Asset('/images/slide/1.jpg')}}">
+                            </a>
+                            <a href="<?php echo URL::to('/') ?>/custome/home">
+                                <img alt="" src="{{Asset('/images/slide/4.jpg')}}">
+                            </a>
+                            <a href="<?php echo URL::to('/') ?>/custome/home">
+                                <img alt="" src="{{Asset('/images/slide/3.jpg')}}">
+                            </a>
+                            <a href="<?php echo URL::to('/') ?>/custome/home">
+                                <img alt="" src="{{Asset('/images/slide/1.jpg')}}">
+                            </a>
+                            <a href="<?php echo URL::to('/') ?>/custome/home">
+                                <img alt="" src="{{Asset('/images/slide/4.jpg')}}">
+                            </a>
+                        </div>
+    
+                        <ul id="thumbs">
+                            <li class="active" rel="1"><img alt="" src="{{Asset('/images/slide/2.jpg')}}"> </li>
+                            <li rel="2"><img alt="" src="/images/slide/3.jpg"> </li>
+                            <li rel="3"><img alt="" src="{{Asset('/images/slide/1.jpg')}}"> </li>
+                            <li rel="4"><img alt="" src="{{Asset('/images/slide/4.jpg')}}"> </li>
+                            <li rel="5"><img alt="" src="{{Asset('/images/slide/3.jpg')}}"> </li>
+                            <li rel="6"><img alt="" src="{{Asset('/images/slide/1.jpg')}}"> </li>
+                            <li rel="7"><img alt="" src="{{Asset('/images/slide/4.jpg')}}"> </li>
+                        </ul>
+ 						<div class="banner">
+                            <a>
+                                <img src="{{Asset('/images/slide/banner-1-398x163.jpg')}}" title="banner" >
+                            </a>
+                        </div>
+                        <div class="banner">
+                            <a>
+                                <img src="{{Asset('/images/slide/banner-2-398x163.jpg')}}" title="banner" >
+                            </a>
+                        </div>
+                        <div class="banner">
+                            <a>
+                                <img src="{{Asset('/images/slide/banner-3-398x163.jpg')}}" title="banner" >
+                            </a>
+                      </div>
+                    </div>
+                     
+              </div>
+          </div>
+            <!--SLIDE: END -->
+             <!--BACKTOP: START-->
+             	<script type="text/javascript">
+					$(document).ready(function() {
+						$('.main-shining').append('<div id="back-top"><a><span>Back to top</span></a>');
+                        $(window).scroll(function(){
+							if($(window).scrollTop() != 0){
+								$('#back-top').fadeIn();
+								}else{
+									$('#back-top').fadeOut();
+									}
+							});
+							$('#back-top').click(function(){
+								$('html, body').animate({scrollTop:0},500);
+								});
+                    });
+                </script>
+            </div>
+             <!--BACKTOP: END-->
+             @yield('content')
+
 @include('footer')
