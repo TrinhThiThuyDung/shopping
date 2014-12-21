@@ -1,117 +1,66 @@
 @include('header')
 @section('style')
-<script type="text/javascript" src="{{Asset(/bootstrap-3.3.1/js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{Asset('/bootstrap-3.3.1/js/bootstrap.min.js')}}"></script>
 <link rel="stylesheet" type="text/css" href="{{Asset('/bootstrap-3.3.1/css/bootstrap-theme.min.css')}}"/>
 <script type="text/javascript" src="{{Asset('/js/jquery.js')}}"></script>
 <link rel="stylesheet" type="text/css" href="{{Asset('/bootstrap-3.3.1/css/bootstrap.css')}}"/>
 <link rel="stylesheet" type="text/css" href="{{Asset('/bootstrap-3.3.1/css/justified-nav.css')}}"/>
 @endsection
-<body class="common-home">
-<div class="main-shining">
-    <div class="main-width">
+<body>
         <div class="main">
             <!--TOP: STRAT -->
-            <div class="top">
-            	<div id="row">
-                    <div class="row-right">
-                        <div class="group-name">
-                        	<img src="{{Asset('/images/header-phone.png')}}" />
-                        </div>
-                        <div id="welcome">
-                            <?php if(!Session::has('conpanyLogin')){?>
-                         Chào mừng bạn tới cửa hàng <a href="<?php echo URL::to('/')?>/companyLogin">Đăng nhập</a>hoặc<a href="<?php echo URL::to('/')?>/companyRegister">Đăng kí</a>
-                         </div>
-                         <?php } ?>
-                        </div>
-                     <div id="logo">
-                     <a href="<?php echo URL::to('/') ?>/supplier/home">
-                     <img src="{{Asset('/images/11.gif')}}" title="logo" alt="logo">
-                     </a>
-                     <a href="<?php echo URL::to('/') ?>/supplier/home">
-                     <img src="{{Asset('/images/23.gif')}}" title="logo" alt="logo">
-                     </a>
-                     <a href="<?php echo URL::to('/') ?>/supplier/home">
-                     <img src="{{Asset('/images/6.gif')}}" title="logo" alt="logo">
-                     </a>
-                     <a href="<?php echo URL::to('/') ?>/supplier/home">
-                     <img src="{{Asset('/images/25.gif')}}" title="logo" alt="logo">
-                     </a>
-                      </div>
-                
+            <div class="masthead">
+            <br />
+            <br />
+            <p>
+                 <a href="{{Asset('company/home')}}">
+                <h1 class="text-muted">
+
+                    HÃY KẾT NỐI CÙNG VỊT CON
+
+                </h1>
+            </a>
+                       <ul class="nav navbar-nav navbar-right">
+                        <li id="fat-menu" class="dropdown">
+                          <a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                           <?php if(Session::has('companyLogin')){
+                            echo Session::get('companyLogin');
+                           }?> 
+                            <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Thông tin</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Đổi mật khẩu</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Khách hàng</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Đăng xuất</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                </p>
+                <br />
+                <br />
+                <br />
+                <div role="navigation">
+                    <ul class="nav nav-justified">
+                        <li>
+                            <a href="{{Asset('/company/home')}}">SẢN PHẨM</a>
+                        </li>
+                        <li>
+                            <a href="{{Asset('/gethistory')}}">KHÁCH HÀNG</a>
+                        </li>
+                        <li>
+                            <a href="{{Asset('/companythongTin')}}">THÔNG TIN CÔNG TY</a>
+                        </li>
+                        <li>
+                            <a href="{{Asset('/doanhthu')}}">DOANH THU</a>
+                        </li>
+                    </ul>
                 </div>
+                @yield('content')
             </div>
-            <!--TOP: END -->
-            
-            <!--MENU: START -->
-            <div id="menu">
-            <ul class="menu">
-            <li class="cat-1">
-            	<a href="#">SẢN PHẨM</a>
-                <ul>
-                    <li>
-                        <a href="#">Danh sách</a>
-                    </li>
-                    <li>
-                        <a href="# ">Thêm sản phảm</a>
-                    </li>
-                    <li>
-                        <a href="#">Xóa sản phẩm</a>
-                    </li>
-                    <li>
-                        <a href="#">Sửa thông tin sản phẩm</a>
-                    </li>
-                   
-                </ul>
-            </li>
-            
-            <li class="cat-5">
-            	<a href="#">KHÁCH HÀNG</a>
-                <ul>
-                <li>
-                        <a href="#">Khách hàng đã mua</a>
-                    </li>
-                    <li>
-                        <a href="# ">Khách hàng thân thiết</a>
-                    </li>
-                </ul>
+        </div>
 
-            </li>
-            <li class="cat-6">
-            	<a href="#">THÔNG TIN</a>
-                 <ul>
-                     <li>
-                        <a href="#">Đổi mật khẩu</a>
-                    </li>
-                    <li>
-                        <a href="# ">Xem thông tin nhà cung cấp</a>
-                    </li>
-                    <li>
-                        <a href="#">Chỉnh sửa thông tin</a>
-                    </li>           
-                </ul>
-
-            </li>
-            <li class="cat-6">
-                <a href="#">DOANH THU</a>
-                 <ul>
-                     <li>
-                        <a href="#">Hàng tuần</a>
-                    </li>
-                    <li>
-                        <a href="# ">Hàng tháng</a>
-                    </li>
-                    <li>
-                        <a href="#">Quý</a>
-                    </li>
-                    <li>
-                        <a href="#">Năm</a>
-                    </li>            
-                </ul>
-
-            </li>
-            </ul>
-            <div class="clear"></div>
-            </div>
             <!--MENU: END -->
             
              <!--BACKTOP: START-->
@@ -132,10 +81,11 @@
                 </script>
             </div>
              <!--BACKTOP: END-->
-             @yield('content')
+             
 @section('company')
 <div class="column col1-3">
                     
                     </div>
                     @endsection
+                    @yield('script')
 @include('footer')

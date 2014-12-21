@@ -44,8 +44,10 @@
 	 		//var_dump($kind_id);
 	 		$products= Product::getKindProduct($kind_id[0]->id);
 	 		$product = Product::getProduct($id_id[0]->id);
-	 		//var_dump($product);
-	 		return View::make('product')->with('product',$product)->with('products',$products);
+	 		$company = DB::table('company')->select('name')->where('id',"=",$product[0]->id_company)->get();
+
+	 		//var_dump($company);
+	 		return View::make('product')->with('product',$product)->with('products',$products)->with('company',$company);
 	 	}
 	 	else{
 	 		unset($products);

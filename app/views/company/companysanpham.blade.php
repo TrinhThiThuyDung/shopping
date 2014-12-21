@@ -1,9 +1,7 @@
 @extends('layout.layout-company')
-<link rel="stylesheet" type="text/css" href="{{Asset('css/bootstrap.css')}}"/>
-<link rel="stylesheet" type="text/css" href="{{Asset('css/style.css')}}"/>
-<script type="text/javascript" src = "{{Asset('/js/jquery-1.11.1.min.js')}}"></script>
+
 @section('title')
-	login
+	Danh sách sản phẩm
 @endsection
 
 @section('content')
@@ -29,7 +27,7 @@
             <div class="clear"></div>
             <!--Hộp chứa nội dung sản phẩm:START--><!-- InstanceBeginEditable name="container" -->
             <div id="container">
-            	<div id="column-right" style="width: 474px;" >
+            	<div id="column-left" style="width: 474px;" >
                 	<br />
                     <br />
                     <br />
@@ -143,107 +141,8 @@
                     <div class="fast-link">
                             <a href="quickview.html">Trang chủ</a>
                                 » 
-                            <a href="login.html">Đăng nhập</a>
+                            <a href="">Thêm sản phẩm</a>
                         </div>
-                      <div>
-                      	<h1>Tên công ty</h1>
-                        <p>Tổng số sản phẩn của công ty 6 </p>
-                        <p>
-                        </p>
-                      </div>
-                      <div class="box featured" style="border: 1px solid #dedede; padding-left: 20px;">
-                        <div class="box-content">
-                        <div class="box-product" >
-                          <ul>
-                            <li class="first-in-line">
-                              <div class="inner-indent">
-                                <div class="img2">
-                                   <a >
-                                   	    <img src="{{Asset('/images//box/Charles Eames Style Bench 1 copy-190x190.png')}}"  alt=""> 
-                                       <!-- <img src="../images/box/Charles Eames Style Bench 1 copy-190x190.png" alt=""/>-->
-                                   </a>
-                                </div>
-                                <div class="name"> <a href="#">Áo thun nam nữ</a> </div>
-                                <div class="wrapper">
-                                  <div class="cart"> <a class="button" href="product.html"> <span>Chi Tiết</span> </a> </div>
-                                  <div class="price"> <span class="price-new">$599</span> <span class="price-old">$600</span> </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="last-in-line">
-                              <div class="inner-indent">
-                                <div class="img2">
-                                   <a>
-                                        <img src="{{Asset('/images//box/Charles Eames Style Bench 1 copy-190x190.png')}}" alt=""/>
-                                   </a>
-                                </div>
-                                <div class="name"> <a href="#">Áo thun nam nữ</a> </div>
-                                <div class="wrapper">
-                                  <div class="cart"> <a href="product.html" class="button"> <span>Chi Tiết</span> </a> </div>
-                                  <div class="price"> <span class="price-new">$599</span> <span class="price-old">$600</span> </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="first-in-line">
-                              <div class="inner-indent">
-                                <div class="img2">
-                                   <a >
-                                        <img src="{{Asset('/images//box/Charles Eames Style Bench 1 copy-190x190.png')}}" alt=""/>
-                                   </a>
-                                </div>
-                                <div class="name"> <a href="#">Áo thun nam nữ</a> </div>
-                                <div class="wrapper">
-                                  <div class="cart"> <a class="button" href="product.html"> <span>Chi Tiết</span> </a> </div>
-                                  <div class="price"> <span class="price-new">$599</span> <span class="price-old">$600</span> </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="last-in-line">
-                              <div class="inner-indent">
-                                <div class="img2">
-                                   <a>
-                                        <img src="{{Asset('/images//box/Charles Eames Style Bench 1 copy-190x190.png')}}" alt=""/>
-                                   </a>
-                                </div>
-                                <div class="name"> <a href="#">Áo thun nam nữ</a> </div>
-                                <div class="wrapper">
-                                  <div class="cart"> <a class="button" href="product.html"> <span>Chi Tiết</span> </a> </div>
-                                  <div class="price"> <span class="price-new">$599</span> <span class="price-old">$600</span> </div>
-                                </div>
-                              </div>
-                            </li>
-                              <li class="first-in-line">
-                              <div class="inner-indent">
-                                <div class="img2">
-                                   <a >
-                                        <img src="{{Asset('/images//box/Charles Eames Style Bench 1 copy-190x190.png')}}" alt=""/>
-                                   </a>
-                                </div>
-                                <div class="name"> <a href="#">Áo thun nam nữ</a> </div>
-                                <div class="wrapper">
-                                  <div class="cart"> <a class="button" href="product.html"> <span>Chi Tiết</span> </a> </div>
-                                  <div class="price"> <span class="price-new">$599</span> <span class="price-old">$600</span> </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="last-in-line">
-                              <div class="inner-indent">
-                                <div class="img2">
-                                   <a>
-                                        <img src="{{Asset('/images//box/Charles Eames Style Bench 1 copy-190x190.png')}}" alt=""/>
-                                   </a>
-                                </div>
-                                <div class="name"> <a href="#">Áo thun nam nữ</a> </div>
-                                <div class="wrapper">
-                                  <div class="cart"> <a class="button" href="product.html"> <span>Chi Tiết</span> </a> </div>
-                                  <div class="price"> <span class="price-new">$599</span> <span class="price-old">$600</span> </div>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
                  
                   </div>
                 </div>

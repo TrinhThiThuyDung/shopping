@@ -1,7 +1,7 @@
-@extends('layout.layout-company')
+@extends('layout/layout-company')
 
 @section('title')
-	Thông tin cá nhân
+	Thông tin công ty
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
 			<label style="font-weight: 700; color:black">Account Name:</label>
 			<label style="margin-left: 20px; color:black">{{$data[0]->account_name}}</label>
 		</div>
-		<div style="height: 30px; margin-left: 20px">
+		<div style="height: 30px; margin-left: 20px; margin-top: 22px;">
 			<label style="font-weight: 700; color:black">Tel </label>
 			<label style="margin-left: 20px; color:black">{{$data[0]->tel}}</label>
 		</div>

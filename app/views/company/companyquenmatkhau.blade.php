@@ -1,13 +1,10 @@
 @extends('layout/layout-company')
-<link rel="stylesheet" type="text/css" href="{{Asset('css/bootstrap.css')}}"/>
-<link rel="stylesheet" type="text/css" href="{{Asset('css/style.css')}}"/>
-<script type="text/javascript" src = "{{Asset('/js/jquery-1.11.1.min.js')}}"></script>
 @section('title')
-Chỉnh sửa thông tin
+	Quên mật khẩu
 @endsection
 
 @section('content')
-<body class="common-home">
+   <body class="common-home">
     <div class="main-shining">
             <!--MENU: END --><!-- InstanceBeginEditable name="container" -->
             <div id="container">
@@ -24,13 +21,19 @@ Chỉnh sửa thông tin
                                     <a href="{{Asset('companyediter')}}">Thay đổi mật khẩu</a>
                                 </li>
                                 <li>
-                                    <a href="forgotten.html">Quên mật khẩu</a>
+                                    <a href="{{Asset('getPassword')}}">Quên mật khẩu</a>
+                                </li>
+                                <li>
+                                    <a href="{{Asset('getInsertProduct')}}">Thêm sản phẩm</a>
                                 </li>
                                 <li>
                                     <a href="stoies.html">Gian hàng</a>
                                 </li>
                                 <li>
                                     <a href="qa.html">Q&A</a>
+                                </li>
+                                <li>
+                                    <a href="customer.html">Khách quen</a>
                                 </li>
                                 
                             </ul>
@@ -77,25 +80,19 @@ Chỉnh sửa thông tin
                                 » 
                             <a href="{{Asset('companyLogin')}}">Đăng nhập</a>
                         </div>
-                        <h1>Thay Đổi Mật Khẩu</h1>
+                        <h1>  </h1>
                         <div class="login-content" style="padding-left:198px;">
                             <div class="left" style="height: 300px">
-                                <h2>thay đổi mật khẩu của hệ thống </h2>
+                                <h2>Forgot Password System</h2>
                                 <div id="error" style="color: red"></div>
-                                <form action="{{Asset('postPass')}}" method="post" id="form_lg" nonvalidate>
+                                <form action="" method="post" id="form_forgot">
                                     <div class="content">
-                                        <b class="padd">Tên tài khoản:</b>
-                                        <input  class="b1" type="text" name="username"  id="username" style="width:310px">
-                                        <b class="padd">Mật khẩu:</b>
-                                        <input class="" type="password" name="pass" id="pass" style="width:310px" >
+                                        <b class="padd">Enter Your Email:</b>
+                                        <input  class="b1" type="text" name="email"  id="email" style="width:310px" style="height: 120px">
                                         <br>
-                                        <div class="content">
-                                        <b class="padd">Mật khẩu moi:</b>
-                                        <input class="" type="password" name="newpass" id="newpass" style="width:310px" >
-                                        <br>
-                                        <div>
-                                         <button type="submit" id="btLogin" name="btLogin" class="btn btn-lg btn-primary btn-block" style="width:310px;background : #d35400; margin-top:15px;border-color: #d35400">SAVE</button>
-                                        </div>
+                                        <button type="submit" id="btLogin" name="btLogin" class="btn btn-lg btn-primary btn-block" style="width:180px;background : #d35400;border-color: #d35400">Send PassWord</button>
+                                
+                                    </div>
                                 </form>
                             </div>
                             </div>
@@ -126,26 +123,22 @@ Chỉnh sửa thông tin
 
 <script type="text/javascript">
 $(document).ready(function(){
-    $('#form_lg').submit(function(){
-        var username= $('#username').val();
-        var pass = $('#pass').val();
-        var newpass = $('#newpass').val();
+    $('#form_forgot').submit(function(){
+        var email= $('#email').val();
         $.ajax({
            type: 'post',
-           url: '{{Asset('postupdatePass')}}',
+           url: '{{Asset('postPassword')}}',
            data: 
            {
-            username:username,
-            pass:pass,
-            newpass:newpass
+            email:email
            },
            dataType: 'json',
            success:function(data){
              if(data==0){
                 $('#error').empty();
-                $('#error').append("Acountname hoac email khong ton tai trong he thong");
+                $('#error').append("Email khong ton tai trong he thong hoac chua nhap mail");
              }else{
-               document.forms["form_lg"].submit()
+               document.forms["form_forgot"].submit()
             }
            }
         });
@@ -153,4 +146,5 @@ $(document).ready(function(){
     });   
 });
 </script>
+
 @endsection

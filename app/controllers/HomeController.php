@@ -48,6 +48,15 @@ class HomeController extends BaseController {
 public function logoutCompany()
 	{
 		Session::forget("companyLogin");
+		Session::forget("CompanyProduct");
+        Session::forget("CompanyP");
+        Session::forget("countYear");
+        Session::forget("countQI");
+        Session::forget("countQII");
+        Session::forget("countQIII");
+        Session::forget("countQIV");
+        Session::forget("countMonth");
+        
 		return Redirect::to('companyLogin');
 	}
 	public function texsearch(){

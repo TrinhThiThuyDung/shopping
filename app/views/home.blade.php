@@ -77,11 +77,10 @@ Trang chu
                       
                       <ul>
                          <?php 
-                        //var_dump($products['product'][0]);
-                        //$limit_show = 4 < count($products)? 4 : (count($products));
+                      
                         $i = 0;
                         $total = (int)(count($products['product'])/4);
-                        //var_dump($total);
+                       
                         $y = $i;
                        while($i<$total&&$i<8){
                          ?>
@@ -96,7 +95,8 @@ Trang chu
                             <div class="name"> <a href="<?php echo 'product/'.$products['product'][$y]->id_kind.'/'.$products['product'][$y]->id;?>"><?php echo $products['product'][$y]->name;?></a> </div>
                             <div class="wrapper">
                               <div class="cart"> <a class="button" href="<?php echo 'product/'.$products['product'][$y]->id_kind.'/'.$products['product'][$y]->id;?>"> <span>Chi Tiết</span></a></div>
-                              <div class="price"> <span class="price-new"><?php echo $products['product'][$y]->price;?></span> </div>
+                              <div class="price"> <span class="price-new"><?php echo $products['product'][$y]->price;?></span> 
+                                <span class="price-old"><?php echo (int)(($products['product'][$y]->price*100)/30); ?></span></div>
                             </div>
                           </form>
                           </div>
@@ -112,7 +112,8 @@ Trang chu
                             <div class="name"> <a href="#"><?php echo $products['product'][$y+1]->name;?></a> </div>
                             <div class="wrapper">
                               <div class="cart"> <a class="button" href="<?php echo 'product/'.$products['product'][$y+1]->id_kind.'/'.$products['product'][$y+1]->id;?>"><span>Chi Tiết</span> </a> </div>
-                              <div class="price"> <span class="price-new"><?php echo $products['product'][$y+1]->price;?></span> <span class="price-old">$600</span> </div>
+                              <div class="price"> <span class="price-new"><?php echo $products['product'][$y+1]->price;?></span> 
+                                <span class="price-old"><?php echo (int)(($products['product'][$y+1]->price*100)/30); ?></span> </div>
                             </form>
                             </div>
                           </div>
@@ -129,7 +130,8 @@ Trang chu
                             <div class="name"> <a href="#"><?php echo $products['product'][$y+2]->name;?></a> </div>
                             <div class="wrapper">
                               <div class="cart"> <a class="button" href="<?php echo 'product/'.$products['product'][$y+2]->id_kind.'/'.$products['product'][$y+2]->id;?>"> <span>Chi Tiết </a> </div>
-                              <div class="price"> <span class="price-new"><?php echo $products['product'][$y+2]->price;?></span> <span class="price-old">$600</span> </div>
+                              <div class="price"> <span class="price-new"><?php echo $products['product'][$y+2]->price;?></span> 
+                                <span class="price-old"><?php echo (int)(($products['product'][$y+2]->price*100)/30); ?></span> </div>
                             </div>
                           </form>
                           </div>
@@ -145,7 +147,8 @@ Trang chu
                             <div class="name"> <a href="#"><?php echo $products['product'][$y+3]->name;?></a> </div>
                             <div class="wrapper">
                               <div class="cart"> <a href="<?php echo 'product/'.$products['product'][$y+3]->id_kind.'/'.$products['product'][$y+3]->id;?>"  class="button"> <span>Chi Tiết</span></a></div>
-                              <div class="price"> <span class="price-new"><?php echo $products['product'][$y+3]->price;?></span> <span class="price-old">$600</span> </div>
+                              <div class="price"> <span class="price-new"><?php echo $products['product'][$y+3]->price;?></span>
+                               <span class="price-old"><?php echo (int)(($products['product'][$y+3]->price*100)/30); ?></span> </div>
                             </div>
                           </form>
                           </div>

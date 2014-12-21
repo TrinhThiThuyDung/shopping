@@ -33,6 +33,7 @@
 	padding-top:0px;
 	padding-left:0px;
 	padding-right:20px;
+	
 }
 #content .content{
 	margin-bottom:30px;
@@ -450,7 +451,7 @@ body{
 	margin:0px;
 	padding:0px;
 	background:#fff;
-	font-size:15px;
+	font-size:12px;
 	line-height:18px;
 	width:100%;
 	}
@@ -704,7 +705,6 @@ ul#thumbs img{
 	color:#433225;
 	text-transform:uppercase;
 	margin:0 0 14px 0;
-	font-size: 18px;
 }
 #footer .column {
 	float: left;
@@ -878,7 +878,7 @@ ul#thumbs img{
 	}
 #register .q1{
 	width:300px;
-	height:20px;
+	height:35px;
 	}
 #register .q2{
 	width:600px;
@@ -890,7 +890,7 @@ ul#thumbs img{
 	}
 #register .q4{
 	width: 250px;
-	height: 20px;
+	height: 30px;
 	}
 #register .q5{
 	width: 250px;
@@ -1908,7 +1908,6 @@ ul#thumbs img{
 .product-list ul li:first-child {
 	padding-top:10px;
 	border:none;
-	margin-left: -210px;
 }
 .product-grid .price-old {
 	text-decoration: line-through;

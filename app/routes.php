@@ -72,7 +72,14 @@ Route::get('searchSP', 'HomeController@searchSP');
 Route::get('searchP', 'HomeController@searchP');
 Route::get('search_name', 'HomeController@search_name');
 
+Route::post('/postMail','CompanyController@postCreate');
+Route::get('/home', 'HomeController@home');
+Route::get('/logout', 'HomeController@logout');
 Route::get('/logoutCompany', 'HomeController@logoutCompany');
+Route::get('/gethistory', 'CompanyController@historyProduct');
+Route::get('/doanhthu', 'CompanyController@getdoanhthuYear');
+
+
 
 
 Route::post('/companyLoginTc','CompanyController@companyLoginTc');
@@ -82,12 +89,36 @@ Route::get('/companyRegister','CompanyController@getCompanyRegister');
 Route::post('/companyRegister','CompanyController@postCompanyRegister');
 Route::get('/companyediter','CompanyController@getcompanyEditor');
 Route::post('/postcompanyediter','CompanyController@postCompanyEditor');
+Route::post('/postupdatePass','CompanyController@postUpdatePass');
+Route::post('/postPass','CompanyController@postPass');
+
 
 Route::get('/companysanpham','CompanyController@getEditSanPham');
 Route::post('/companyEditsanpham','CompanyController@postEditSanPham');
 
-Route::get('/companyThongtin','CompanyController@getThongtin');
+
 Route::post('/companyThongtin','CompanyController@getThongtin');
-Route::get('companythongTin','thongTinController@thongTinCompany');
+Route::get('/companythongTin','thongTinController@thongTinCompany');
 Route::post('checkcompanyaccountname','CompanyController@checkAccountname');
-Route::get('chitiet', 'sanphamController@chitiet');
+Route::get('/getInsertProduct','CompanyController@getInsertProduct');
+Route::post('/postInsertProduct','CompanyController@postInsertProduct');
+
+
+Route::post('/ktupdatePro','CompanyController@updateProduct');
+Route::post('/ktdeletePro','CompanyController@deleteProduct');
+Route::get ('/getPassword','CompanyController@getPassword');
+Route::post('/postPassword','CompanyController@postPassword');
+
+Route::get('/companymessage','CompanyController@getThongtinCompany');
+Route::post('/checkupdateCompany','CompanyController@checkupdateCompany');
+Route::get('/updateCompany','CompanyController@companyupdate');
+
+Route::post('/productLoginTc','productController@productLoginTc');
+Route::get('/productLogin', 'productController@getProductLogin');
+Route::post('/ktproductLogin','productController@checkLogin');
+Route::get('/productRegister','productController@getProductRegister');
+Route::post('/productRegister','productController@postProductRegister');
+Route::post('checkaccountname','productController@checkAccountname');
+
+Route::get('company/home','CompanyController@getAllProduct');
+	

@@ -32,7 +32,27 @@
 			
 			$data = Product::where('name' ,'LIKE','%'.$search.'%')->get(); 
 			return $data;
-		} 
+		}
+		 public static function insert($productname,$nameimg,$descripbe,$lenght,$height,$width,$depth,$color,$price,$codecompany,$idkind){
+			$user = array("id_company"=>$codecompany,"id_kind"=>$idkind,"name"=>$productname,"length"=>$lenght,"hight"=>$height,"width"=>$width,
+				"depth"=>$depth,"color"=>$color,"describe"=>$descripbe,"image"=>$nameimg,"price"=>$price);
+			DB::table('product')->insert($user);
+		}
+        public static function deleteProduct($id){
+        	DB::table('product')->where("id","=",$id)->delete();
+        }
+        public static function updateProductName($id, $productname){
+            $update = array("pass"=> $productname);
+			Product::where('id', '=', $id)->update($update);
+        }
+        public static function updateProductdescripbe($id, $descripbe){
+            $update = array("pass"=> $descripbe);
+			Product::where('id', '=', $id)->update($update);
+        }
+        public static function updateProductcodecompany($id, $codecompany){
+            $update = array("pass"=> $codecompany);
+			Product::where('id', '=', $id)->update($update);
+        }
 	}
 	
 ?>

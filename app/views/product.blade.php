@@ -10,75 +10,8 @@
 <!--MENU: END --><!-- InstanceBeginEditable name="container" -->
             <div id="container">
             	<div id="column-right">
-                	<div class="box specials">
-                    	<div class="box-heading special-heading">Hàng tốt</div>
-                        <?php 
-                        //var_dump($products);
-                        $count = count($products);
-                        for($i = 0; $i < $count; $i++){
-                            if($products[$i]->price > 3000000){
-                            ?>
-                        <div class="box-content">
-                        	<div class="box-product">
-                            	<ul>
-                                	<li>
-                                        <div class="img2" style="overflow: auto; width: 240px;"> 
-                                            <form action="<?php echo 'product/'.$products[$i]->id_kind.'/'.$products[$i]->id;?>" class="colorbox1">
-                                                <img src="<?php echo $url.$products[$i]->image;?>" />
-                                            </form>
-                   	
-                                         </div>
-                                        <div class="name"><font size='5' color='#8e6600'><?php echo $products[$i]->name;?></font></div>
-                                        <div class="description"><?php $string = str_split($products[$i]->describe, 30); echo $string[0].' ...'; ?></div>
-                                        <button onclick="<?php echo $products[$i]->describe;?>" value="click">CHI TIET</button>
-                                        
-
-                                        <div class="price"> 
-                                         	<span class="price-new"><?php echo $products[$i]->price;?></span>
-                                            <span class="price-old">$600</span> 
-                                          </div>
-                                           <form method="get" action="{{Asset('giohang')}}" class="inline" id="formSP">
-                                        <div class="cart"><button id="id" class = "button-prod" style="background:#D45F09" value="<?php  echo $products['$i']->id; ?>"><span>VÀO GIỎ</span> </button>  </div>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <?php   break;}}
-                        if($i == $count) echo "Hien dang cap nhat";
-                        ?>
-                    </div>
-                    <div class="box bestsellers">
-                    	<div class="box-heading special-heading">Hàng hot</div>
-                    <?php 
-                        $count_hot = 1 < ($count-1)? 1 : ($count - 1);
-                        if($count_hot <= 0) echo "Hien dang cap nhat";
-                        for($id = 0; $id < $count_hot; $id++){?>
-                        <div class="box-content">
-                        	<div class="box-product">
-                            	<ul>
-                                	<li>
-                                        <div class="img2"  style="overflow: auto; width: 240px;"> 
-                                        	<a href="product.html" class="colorbox1"> 
-                                            	<img src="<?php echo $url.$products[$id]->image;?>" /> 
-                                            </a> 
-                                         </div>
-                                        <div class="name"><font size='5' color='#8e6600'><?php echo $products[$id]->name;?></font></div>
-                                        <div class="description"><?php $string = str_split($products[$id]->describe, 30); echo $string[0].' ...';?></div>
-                                        <div class="price"> 
-                                         	<span class="price-new"><?php echo $products[$id]->price;?></span>
-                                            <span class="price-old">$600</span> 
-                                          </div>
-                                           <form method="get" action="{{Asset('giohang')}}" class="inline" id="formSP">
-                                        <div class="cart"> <button id="id" class="button-prod" style="background:#D45F09" value="<?php echo $products[$id]->id; ?>"> <span>VÀO GIỎ</span> </button> </div>
-                                    </form>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <?php }
-                        ?>
-                    </div>
+                	
+                   
                 </div>
                 <div id="content">
                 	<div class="fast-link">
@@ -103,8 +36,8 @@
                                 <div class="extra-wrap">
                             	<ul><li><font size='5' color='#8e6636'><strong><?php echo $product[0]->name;?></strong></font></li></ul>
                                 <div class="description">
-                                	<span>Nhãn hiệu : </span>
-                                    <a href="brand.html">tên của 1 nhẫn cao cấp</a>
+                                	<span>Sản phẩm thuộc công ty : </span>
+                                    <a href=""><?php echo $company[0]->name; ?></a>
                                     <br />
                                 	<span>Mã sản phẩm : </span><?php echo $product[0]->id_kind;?>
                                     <br />
@@ -113,13 +46,18 @@
                                         	<span class="prod-stock-2">
                                             Trạng thái :
                                             </span>
-                                            <div class="prod-stock">Con hang</div>
+                                            <div class="prod-stock"><?php if($product[0]->selled<$product[0]->input){
+                                                echo "Còn hàng";
+                                            }else{
+                                                echo "Hết hàng";
+                                            } ?></div>
                                         </div>
                                     </div></br>
                                     <span>Mo ta: </span><?php echo $product[0]->describe;?></br></br>
 
                                     <div class="price">
                                     	<span class="text-price">Giá : </span><?php echo $product[0]->price;?>
+                                        <span class="price-old"><?php echo (int) (($product[0]->price*100)/30); ?>VNĐ</span>
                                         <br />
                                         <span class="reward">
                                         	<small>Giá trên đã bao gồm cả VAT :)</small>
@@ -129,8 +67,8 @@
                                     	<div class="prod-row">
                                         	<div class="cart-top">
                                             	<div class="cart-top-padd">
-                                                	<label>Số lượng:</label>
-                                                    <input type="text" value="1" size="2" name="quantity" />
+                                                	<label>Số lượng đã mua:</label>
+                                                    <span><?php echo $product[0]->selled; ?></span>
                                                 </div>
                                                  <form method="get" action="{{Asset('giohang')}}" class="inline" id="formSP">
                                                 <button id="id" style="background:#D45F09" "button-prod" class = "button" value="<?php  echo $product[0]->id; ?>"><span>VÀO GIỎ </span> </button>

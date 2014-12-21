@@ -9,7 +9,14 @@
 				return View::make('customer/thongTin')->with('data',$data);
 			}else return Redirect::to('customerLogin');
 		}
+public function thongTinCompany(){
+        		if(Session::has("companyLogin")){
+				$username = Session::get('companyLogin');
+				$data = Company::thongTin($username);
 
+				return View::make('company/companythongTin')->with('data',$data);
+			}else return Redirect::to('companyLogin');
+        } 
 		//thay đổi mật khẩu
 		public function pass(){
 			return View::make('customer/pass');

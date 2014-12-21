@@ -1,9 +1,7 @@
-@extends('layout.layout-company')
-<link rel="stylesheet" type="text/css" href="{{Asset('css/bootstrap.css')}}"/>
-<link rel="stylesheet" type="text/css" href="{{Asset('css/style.css')}}"/>
-<script type="text/javascript" src = "{{Asset('/js/jquery-1.11.1.min.js')}}"></script>
+@extends('layout/layout-company')
+
 @section('title')
-	login
+	Đăng nhập
 @endsection
 
 @section('content')
@@ -24,21 +22,17 @@
                                     <a href="{{Asset('companyediter')}}">Thay đổi mật khẩu</a>
                                 </li>
                                 <li>
-                                    <a href="forgotten.html">Quên mật khẩu</a>
+                                    <a href="{{Asset('getPassword')}}">Quên mật khẩu</a>
                                 </li>
                                 <li>
-                                    <a href="{{Asset('companysanpham')}}">Thêm sản phẩm</a>
+                                    <a href="{{Asset('getInsertProduct')}}">Thêm sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="stoies.html">Gian hàng</a>
+                                    <a href="{{Asset('companymessage')}}">Thong tin nha cung cap va Doanh thu</a>
                                 </li>
                                 <li>
-                                    <a href="qa.html">Q&A</a>
-                                </li>
-                                <li>
-                                    <a href="customer.html">Khách quen</a>
-                                </li>
-                                
+                                    <a href="{{Asset('gethistory')}}">listNguoimua</a>
+                                </li>     
                             </ul>
                         </div> 
                     </div>
