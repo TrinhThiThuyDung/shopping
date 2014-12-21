@@ -22,15 +22,8 @@
                         <li> <a href="#policy.html">Hướng dẫn mua hàng</a> </li>
                       </ul>
                     </div>
-                    <div class="column col1-3">
-                      <h3>NHÀ CUNG CẤP</h3>
-                      <ul>
-                        <li> <a href="http://avalo.vn/">AVALO</a> </li>
-                        <li> <a href="http://www.honda.com.vn/">Nội thất Hòa Phát</a> </li>
-                        <li> <a href="http://www.thietkekientrucvietvn/">Areka  Vietnam</a> </li>
-                        <li> <a href="http://www.kbis.vn/">KBIS</a> </li>
-                      </ul>
-                    </div>
+                    @yield('company')
+                    
                     <div class="column col1-4">
                       <h3>Kết nối vitCon qua:</h3>
                       <div class="connect"> <a href="https://www.facebook.com/groups/1469418123327612/?fref=ts"> <img src="{{Asset('/images/connect.png')}}" style="width:224px;" /> </a> </div>

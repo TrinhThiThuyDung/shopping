@@ -1,0 +1,96 @@
+
+/* CSS Document */
+
+#menu1 {
+	margin:0 auto 0px;
+	width:1064px;
+	padding:0;
+}
+#menu1 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+}
+#menu1 > ul {float:left;}
+#menu1 > ul > li {
+	float: left;
+	z-index: 10;
+	padding:0px 0px 0px 0px;
+	position:relative;**
+
+}
+
+#menu1 > ul > li > a {
+	font-size: 16px;
+	color: #fff;
+	line-height:20px;
+	text-decoration: none;
+	display:block;
+	padding: 13px 19px 15px 18px;
+	z-index: 1;
+	position: relative;**
+	font-weight:normal;
+	font-family:cursive, sans-serif;
+}
+
+#menu1 > ul > li > ul{
+	display: none;
+	position: absolute; **
+	z-index: 99;
+	padding:0 0 0px 0;
+	background:#4e463f;
+	left:0px;
+	top:48px;
+	width:192px;
+	margin:0;
+	}
+#menu1 > ul > li > a:hover, #menu1 > ul > li.sfHover > a, #menu1 > ul > li.active > a   {
+	color:#fff;
+	}
+#menu1 > ul > li:hover ul{
+	display:block;
+	}
+#menu1 > ul > li ul + ul {
+	padding-left: 0px;
+	min-height:162px;
+}
+#menu1 > ul > li ul > li > a {
+	text-decoration: none;
+	padding:0px 0px 0px 0px;
+	color: #acacac;
+	display:block;
+	white-space: nowrap;
+}
+
+#menu1 > ul > li ul > li > a:hover, #menu1 > ul > li ul > li.active > a, #menu1 > ul > li ul > li.sfHover > a, #menu1 > ul > li ul > li a.active {
+	color:#d45f09;
+}
+#menu1 > ul > li > ul li {
+	 position:relative;
+	background: #f7f7f7  repeat-x; 
+	 } 
+#menu1 > ul > li > ul > li  a {
+	color: #666;
+	position:relative;
+	font-size:12px;
+	text-transform:none;
+	line-height:32px;
+	text-align:left;
+	background:#f7f7f7 11px 14px no-repeat;
+	padding-left:22px;
+
+}
+#menu1 ul > ul > li ul  { 
+    display:none;
+	position:absolute;
+	left:192px;
+	top:0px;
+	background:#f7f7f7; 
+	width:192px;
+	padding:0  0 0px 0;
+} 
+#menu1  ul > ul > li:hover ul{
+	display:block;
+	}
+#menu1 ul > ul > li ul li a:hover, #menu1 ul > ul > li ul li a.active { color:#d45f09; }

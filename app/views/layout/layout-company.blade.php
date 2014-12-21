@@ -1,4 +1,11 @@
 @include('header')
+@section('style')
+<script type="text/javascript" src="{{Asset(/bootstrap-3.3.1/js/bootstrap.min.js')}}"></script>
+<link rel="stylesheet" type="text/css" href="{{Asset('/bootstrap-3.3.1/css/bootstrap-theme.min.css')}}"/>
+<script type="text/javascript" src="{{Asset('/js/jquery.js')}}"></script>
+<link rel="stylesheet" type="text/css" href="{{Asset('/bootstrap-3.3.1/css/bootstrap.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{Asset('/bootstrap-3.3.1/css/justified-nav.css')}}"/>
+@endsection
 <body class="common-home">
 <div class="main-shining">
     <div class="main-width">
@@ -11,8 +18,8 @@
                         	<img src="{{Asset('/images/header-phone.png')}}" />
                         </div>
                         <div id="welcome">
-                            <?php if(!Session::has('id_supplier')){?>
-                         Chào mừng bạn tới cửa hàng <a href="<?php echo URL::to('/')?>/supplier/login">Đăng nhập</a>hoặc<a href="<?php echo URL::to('/')?>/supplier/signup ?>">Đăng kí</a>
+                            <?php if(!Session::has('conpanyLogin')){?>
+                         Chào mừng bạn tới cửa hàng <a href="<?php echo URL::to('/')?>/companyLogin">Đăng nhập</a>hoặc<a href="<?php echo URL::to('/')?>/companyRegister">Đăng kí</a>
                          </div>
                          <?php } ?>
                         </div>
@@ -126,5 +133,9 @@
             </div>
              <!--BACKTOP: END-->
              @yield('content')
-
+@section('company')
+<div class="column col1-3">
+                    
+                    </div>
+                    @endsection
 @include('footer')

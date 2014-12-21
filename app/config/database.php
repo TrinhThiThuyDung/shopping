@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'shopping',
+			'database'  => 'shoppingtest',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

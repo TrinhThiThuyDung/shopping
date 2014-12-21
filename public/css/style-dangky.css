@@ -1,0 +1,55 @@
+form{
+	width: 400px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+form input{
+	margin-top: 10px;
+	width: 400px;
+	height: 40px;
+
+}
+.dk{
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 550px;
+}
+.day{
+	margin-top: 10px;
+	padding-left: 10px;
+	width: 400px;
+	height: 30px;
+}
+.rr{
+	width: 400px;
+	height: 30px;
+	margin-top: 10px;
+}
+.rr div{
+	float: left;
+	color: #95a5a6;
+	 font-size: 14px; 
+	margin-left: 10px;
+}
+.rr input{
+	float: left;
+	margin-left: 40px;
+}
+.khung1{
+	width: 800px;
+	height: 50px;
+}
+.khung1 input{
+	width: 400px;
+	float: left;
+}
+.khung1 label{
+	width: 300px;
+	color: #ea6153;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
