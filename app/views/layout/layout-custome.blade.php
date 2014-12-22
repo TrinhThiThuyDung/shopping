@@ -53,7 +53,7 @@
                         </form>
                          <?php if((!Session::has('userLogin'))&&(!Session::has('companyLogin'))){ ?>
                          <div id="company">
-                         	Dành cho nhà sản xuất <a href="<?php echo URL::to('/')?>/companyLoginTc/">Đăng nhập</a>
+                         	Dành cho nhà sản xuất <a href="<?php echo URL::to('/')?>/companyLogin/">Đăng nhập</a>
                          </div>
                          <?php }?>
                         </div>
