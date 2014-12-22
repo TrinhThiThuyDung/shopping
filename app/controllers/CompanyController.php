@@ -119,14 +119,11 @@
              $productname=$_POST['productname'];
              $nameimg = $_FILES['file']['name'];
              $descripbe=$_POST['descripbe'];
-             $lenght=$_POST['lenght'];
-             $height=$_POST['height'];
-             $width=$_POST['width'];
-             $depth=$_POST['depth'];
+           
              $color=$_POST['color'];
              $idkind=$_POST['idkind'];
              $price=$_POST['price'];
-             $codecompany=$_POST['codecompany'];
+            
              if($_FILES['file']['name'] != NULL){
 
                  if($_FILES['file']['type'] == "image/jpeg"
@@ -145,7 +142,7 @@
                  }
              }
                         
-             Product::insert($productname,$nameimg,$descripbe,$lenght,$height,$width,$depth,$color,$price,$codecompany,$idkind);
+             Product::insert($productname,$nameimg,$descripbe,$color,$price,$idkind);
              return Redirect::to('companysanpham');
         }
         
@@ -177,15 +174,12 @@
                 }
                  $productname=$_POST['productname'];
                  $descripbe=$_POST['descripbe'];
-                 $lenght="20";
-                 $height="190";
-                 $width="190";
-                 $depth="50";
+                
                  $color="RED";
                  $idkind="1";
                  $price=$_POST['codecompany'];
                  $codecompany=Session::get('CompanyP');
-                 $user = array("id_company"=>$codecompany,"id_kind"=>$idkind,"name"=>$productname,"length"=>$lenght,"hight"=>$height,"width"=>$width,"depth"=>$depth,"color"=>$color,"describe"=>$descripbe,"image"=>$imagename,"price"=>$price);
+                 $user = array("id_company"=>$codecompany,"id_kind"=>$idkind,"name"=>$productname,"color"=>$color,"describe"=>$descripbe,"image"=>$imagename,"price"=>$price);
                  DB::table('product')->insert($user);
                  $users = DB::table('product')->where("id_company","=",$codecompany)->count('id');
                     if($users!=null){

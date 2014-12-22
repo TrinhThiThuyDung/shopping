@@ -63,38 +63,7 @@
                                     </tr>
 
                                     
-                                     <tr>
-                                       <td>
-                                         <span class="required">*</span> lenght :
-                                        </td>
-                                        <td>
-                                          <input class="q4" type="text" name="lenght" id="lenght"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                       <td>
-                                         <span class="required">*</span> height :
-                                        </td>
-                                        <td>
-                                          <input class="q4" type="text" name="height" id="height"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                       <td>
-                                         <span class="required">*</span> width :
-                                        </td>
-                                        <td>
-                                          <input class="q4" type="text" name="width" id="width"/>
-                                        </td>
-                                    </tr>
-                                     <tr>
-                                       <td>
-                                         <span class="required">*</span> depth :
-                                        </td>
-                                        <td>
-                                          <input class="q4" type="text" name="depth" id="depth"/>
-                                        </td>
-                                    </tr>
+                                    
                                     <tr>
                                        <td>
                                          <span class="required">*</span> color :
@@ -105,10 +74,12 @@
                                     </tr>
                                      <tr>
                                        <td>
-                                         <span class="required">*</span> Id Kind :
+                                         <span class="required">*</span> Loại sản phẩm:
                                         </td>
                                         <td>
-                                          <input class="q4" type="text" name="idkind" id="idkind"/>
+                                          <select >
+                                              <option value="10">Phòng khách</option>
+                                          </select>
                                         </td>
                                     </tr>
                                      <tr>
@@ -119,14 +90,7 @@
                                           <input class="q4" type="text" name="price" id="price"/>
                                         </td>
                                     </tr>
-                                    <tr>
-                                    	<td>
-                                        	<span class="required">*</span>Mã số công ty:
-                                        </td>
-                                        <td>
-                                        	<input class="q1" type="text" name="codecompany" id="codecompany"/>
-                                        </td>
-                                    </tr>
+                            
                                     <td>
                                         <button class="btn btn-lg btn-primary btn-block" style="width: 95px; background : #d35400; margin-top:10px;margin-left:10px;border-color: #d35400">Tiếp tục</button>
                                     <!--	<a class="button">
@@ -164,18 +128,7 @@
                     required:true
                 },
                
-                lenght:{
-                    required:true
-                },
-                height:{
-                    required:true
-                },
-                width:{
-                    required:true
-                },
-                depth:{
-                   required:true
-                },
+    
                 color:{
                    required:true
                 },
@@ -184,10 +137,7 @@
                 },
                 price:{
                   required:true
-                },
-                codecompany:{
-                  required:true
-                }
+                
 
             },
             messages:{
@@ -197,12 +147,7 @@
                 descripbe:{
                     required:"Vui lòng nhập description",
                 },
-                lenght:{
-                    required:"Vui lòng nhập lenght",
-                },
-                height:{
-                    required:"Vui lòng nhập height",
-                }
+              
             },
         })
         

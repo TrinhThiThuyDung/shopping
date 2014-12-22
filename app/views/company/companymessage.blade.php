@@ -27,10 +27,10 @@
             <div id="container">
             	<div>
             	<ul class="nav nav-tabs" role="tablist" id="myTab">
-                              <li role="presentation" class="active"><a style="color:#FFF;background-color:#5cb85c" href="#week" aria-controls="home" role="tab" data-toggle="tab">	TUẦN	</a></li>
+                             
                               <li role="presentation"><a style="color:#FFF;background-color:#31b0d5"href="#mun" aria-controls="profile" role="tab" data-toggle="tab">	THÁNG	</a></li>
                               <li role="presentation"><a style="color:#FFF;background-color:#c9302c"href="#year" aria-controls="messages" role="tab" data-toggle="tab">	NĂM	</a></li>
-                              <li role="presentation"><a style="color:#FFF;background-color:#ec971f"href="#chen" aria-controls="settings" role="tab" data-toggle="tab">	THÔNG TIN CÔNG TY	</a></li>
+                             
                             </ul>
                             
                             <div class="tab-content"  style="width: 984px;">

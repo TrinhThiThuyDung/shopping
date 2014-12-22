@@ -73,7 +73,7 @@ Route::get('searchP', 'HomeController@searchP');
 Route::get('search_name', 'HomeController@search_name');
 
 Route::post('/postMail','CompanyController@postCreate');
-Route::get('/home', 'HomeController@home');
+//Route::get('/home', 'HomeController@home');
 Route::get('/logout', 'HomeController@logout');
 Route::get('/logoutCompany', 'HomeController@logoutCompany');
 Route::get('/gethistory', 'CompanyController@historyProduct');

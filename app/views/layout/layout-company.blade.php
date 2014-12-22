@@ -1,11 +1,12 @@
 @include('header')
-@section('style')
+
 <script type="text/javascript" src="{{Asset('/bootstrap-3.3.1/js/bootstrap.min.js')}}"></script>
 <link rel="stylesheet" type="text/css" href="{{Asset('/bootstrap-3.3.1/css/bootstrap-theme.min.css')}}"/>
 <script type="text/javascript" src="{{Asset('/js/jquery.js')}}"></script>
 <link rel="stylesheet" type="text/css" href="{{Asset('/bootstrap-3.3.1/css/bootstrap.css')}}"/>
 <link rel="stylesheet" type="text/css" href="{{Asset('/bootstrap-3.3.1/css/justified-nav.css')}}"/>
-@endsection
+<link rel="stylesheet" type="text/css" href="{{Asset('/css/home.css')}}" />
+
 <body>
         <div class="main">
             <!--TOP: STRAT -->
@@ -20,23 +21,29 @@
 
                 </h1>
             </a>
-                       <ul class="nav navbar-nav navbar-right">
-                        <li id="fat-menu" class="dropdown">
-                          <a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-                           <?php if(Session::has('companyLogin')){
-                            echo Session::get('companyLogin');
-                           }?> 
-                            <span class="caret"></span>
-                          </a>
-                          <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Thông tin</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Đổi mật khẩu</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Khách hàng</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Đăng xuất</a></li>
-                          </ul>
-                        </li>
-                      </ul>
+                      <div id="welcome" style="width: 300px;">
+                         <div style="float:left; padding-top: 20px">Công ty: </div>
+                                    
+                                    <div id="menu1" style="float:left; width: 100px; height:30px;color: #433225">
+                                    <ul class="menu">
+                                    <li class="cat-1" style="">
+                                        <a  style="color: #433225; margin-bottom: 30px; height: 20px">{{ Session::get("companyLogin");}}</a>
+                                        <ul>
+                                            <li>
+                                                <a href="{{Asset('/companythongTin')}}">Thông tin cá nhân</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{Asset('/getPassword')}}">Thay đỗi pass</a>
+                                            </li>
+            
+                                        </ul>
+                                    </li>
+                                    </ul>
+                                    </div>
+                                    <label style="padding-top: 20px"> <a href="{{Asset('/logoutCompany')}}" >Đăng xuất</a> </label>
+                                                                
+                        
+                         </div>
                 </p>
                 <br />
                 <br />
@@ -53,7 +60,7 @@
                             <a href="{{Asset('/companythongTin')}}">THÔNG TIN CÔNG TY</a>
                         </li>
                         <li>
-                            <a href="{{Asset('/doanhthu')}}">DOANH THU</a>
+                            <a href="{{Asset('/companymessage')}}">DOANH THU</a>
                         </li>
                     </ul>
                 </div>

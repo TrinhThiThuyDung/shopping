@@ -39,9 +39,9 @@
                                     </div>
                                     <label style="padding-top: 20px"> <a href="{{Asset('logout')}}" >Đăng xuất</a> </label>
                                                                 
-                          <?php }?>
+                        
                          </div>
-
+  <?php }?>
                        <form id ="search" method="get" action="{{Asset('search_name')}}" style="height:35px; width: 350px">
                             <button class="button-search" name="search" style="font-size:15; height:35px">Tìm kiếm</button>
                             <span class="search-input" >
